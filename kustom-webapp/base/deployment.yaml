@@ -4,7 +4,13 @@ metadata:
   name: mywebapp
 spec:
   replicas: 1
+  selector:
+    matchLabels:
+      app: mywebapp
   template:
+    metadata:
+      labels:
+        app: mywebapp
     spec: # Pod spec
       containers:
       - name: mycontainer
